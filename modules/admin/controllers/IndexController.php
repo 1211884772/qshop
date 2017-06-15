@@ -1,0 +1,1 @@
+<?php/** * Created by PhpStorm. * User: wei.wang * Date: 2017/6/15 * Time: 14:55 */namespace app\modules\admin\controllers;use yii\web\Controller;class IndexController extends Controller {    public function actionIndex() {        return $this->render('index');    }}

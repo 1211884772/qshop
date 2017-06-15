@@ -39,16 +39,40 @@ $config = [
             ],
         ],
         'db' => $db,
-        /*
+
         'urlManager' => [
             'enablePrettyUrl' => true,
             'showScriptName' => false,
+            'enableStrictParsing' => false,//隐藏index.php
             'rules' => [
+                'admin' => 'admin/index/index',
+            ],
+        ],
+
+        /*
+        'urlManager' => [
+            'enablePrettyUrl' => true,//美化url==ture
+            'showScriptName' => false, //不启用严格解析
+            'enableStrictParsing' => true,//隐藏index.php
+            //'suffix' => '.html',
+            'rules' => [
+//                '<controller:\w+>/<action:\w+>/<id:\d+>'=>'<controller>/<action>',
+//                '<controller:\w+>/<action:\w+>'=>'<controller>/<action>',
             ],
         ],
         */
+
     ],
     'params' => $params,
+
+    //模块配置
+    'modules'=>[
+        'admin'=>[
+            'class'=>'app\modules\admin\AdminModule',
+        ]
+    ],
+	
+
 ];
 
 if (YII_ENV_DEV) {
