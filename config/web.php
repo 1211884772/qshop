@@ -38,30 +38,19 @@ $config = [
                 ],
             ],
         ],
-        'db' => $db,
-
+        'db1' => $db['db1'],
+        'db2' => $db['db1'],
         'urlManager' => [
+		    'class' => 'yii\web\UrlManager',
             'enablePrettyUrl' => true,
             'showScriptName' => false,
-            'enableStrictParsing' => false,//隐藏index.php
+            'enableStrictParsing' => true,//隐藏index.php
             'rules' => [
                 'admin' => 'admin/index/index',
+                "<module:\w+>/<controller:\w+>/<action:\w+>"=>"<module>/<controller>/<action>",
+				"<module:\w+>/<controller:\w+>/<action:\w+>/<_get:.*>"=>"<module>/<controller>/<action>",
             ],
         ],
-
-        /*
-        'urlManager' => [
-            'enablePrettyUrl' => true,//美化url==ture
-            'showScriptName' => false, //不启用严格解析
-            'enableStrictParsing' => true,//隐藏index.php
-            //'suffix' => '.html',
-            'rules' => [
-//                '<controller:\w+>/<action:\w+>/<id:\d+>'=>'<controller>/<action>',
-//                '<controller:\w+>/<action:\w+>'=>'<controller>/<action>',
-            ],
-        ],
-        */
-
     ],
     'params' => $params,
 

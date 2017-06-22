@@ -1,0 +1,37 @@
+<!DOCTYPE html>  
+<html lang="en">  
+<head>  
+    <meta charset="UTF-8">  
+    <title>Notifications API</title>  
+</head>  
+<body>  
+    <input id="fire" type="button" value="fire Notification">  
+    <script>  
+    var btn = document.getElementById("fire");  
+    if(window.Notification && Notification.permission !== "denied") {  
+        Notification.requestPermission(function(status) {  
+            if(status === 'granted') {  
+                //弹出一个通知  
+                btn.addEventListener('click', function() {  
+                    var n = new Notification('Title', {//标题  
+                        body : 'I am a Notification' //显示内容  
+                        //以下是可选参数  
+                        //icon :   
+                        //lang :  
+                        //onclick:  
+                        //onclose:  
+                        //onerror:  
+                        //onshow:  
+                        //tag:  
+                    });  
+                    //两秒后关闭通知  
+                    setTimeout(function() {  
+                        n.close();  
+                    }, 2000);  
+                });  
+            }  
+        });  
+    }  
+    </script>  
+</body>  
+</html> 
