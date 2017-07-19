@@ -1,0 +1,1 @@
+<?php/** * Created by PhpStorm. * User: we.wang * Date: 2017/6/25 * Time: 15:56 */namespace app\modules\admin\controllers;use yii;use yii\web\Controller;use yii\web\Request;class PublicController extends Controller{    public $layout = false;    public function actionLogin(){        return $this->render('login');    }}

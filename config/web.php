@@ -40,6 +40,7 @@ $config = [
         ],
         'db1' => $db['db1'],
         'db2' => $db['db1'],
+
         'urlManager' => [
 		    'class' => 'yii\web\UrlManager',
             'enablePrettyUrl' => true,

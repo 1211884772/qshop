@@ -7,6 +7,7 @@ return array(
         'username' => 'root',
         'password' => '',
         'charset' => 'utf8',
+
     ),
     'db2' => array(
         'class' => 'yii\db\Connection',
@@ -14,6 +15,6 @@ return array(
         'username' => 'root',
         'password' => '',
         'charset' => 'utf8',
-    )
+    ),
 );
 

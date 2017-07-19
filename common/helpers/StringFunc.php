@@ -1,7 +1,7 @@
 <?php
 namespace app\common\helpers;
 
-class String {
+class StringFunc {
 
     /**
      * 生成UUID 单机使用
